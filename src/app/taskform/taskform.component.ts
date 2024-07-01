@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-taskform',
@@ -8,8 +8,17 @@ import { Component } from '@angular/core';
   styleUrl: './taskform.component.scss'
 })
 export class TaskformComponent {
+
+
+@Output()showform = new EventEmitter<Boolean>()
+
+
+toggle() {
+  this.showform.emit(false);
+  console.log(this.showform);
+  
+}
 setTask() {
-throw new Error('Method not implemented.');
 }
 
 }

@@ -1,10 +1,12 @@
-<app-taskform *ngIf="showform"></app-taskform>
+<div class="layout">
+<app-taskform *ngIf="showform" (showform)="toggleform()"></app-taskform>
+
 <nav>
     <h1>Task Manager</h1>
-    <div class="link"><button (click)="toggleform()">Add Tasks</button></div></nav>
-
-<app-detail/>
-<app-detail/>
-<app-detail/>
-<app-detail/>
+    <div class="link"><button (click)="toggleform()">Add Tasks</button></div>
+</nav>
+<div class="tasklist" *ngFor="let task of tasklist">
+    <app-detail [task]="task" />
+</div>
+</div>
 <router-outlet />

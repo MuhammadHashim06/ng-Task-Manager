@@ -14,15 +14,15 @@
   padding: 2.5% 10%;
   gap: 15px;
   box-sizing: border-box;
-  box-shadow: 0px 0px 10px grey;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   flex-direction: column;
   justify-content: center;
   align-items: center;
   display: flex;
 }
 .taskform form .taskfield {
-    font-family: sans-serif;
-      border: none;
+  font-family: sans-serif;
+  border: none;
   border: 1px solid grey;
   border-radius: 5px;
   padding: 5px;
@@ -30,15 +30,14 @@
   width: 100%;
 }
 .taskform form #button {
-    cursor: pointer;
+  cursor: pointer;
   border: none;
-  color: #c9184a;
-  background-color: #ffccd5;
+  background-color: #c9184a;
+  color: white;
   padding: 6.5px;
   width: 100%;
   border-radius: 5px;
 }
-.taskform form #button:active{
-    background-color: #ff8fa3;
-
+.taskform form #button:active {
+  background-color: #ff8fa3;
 }

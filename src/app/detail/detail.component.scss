@@ -1,0 +1,39 @@
+// .Taskcard{
+//     border-radius: 5px;
+//     box-shadow: 0px 0px 5px grey;
+// }
+// .Taskcard__header{
+//     display: flex;
+// align-items: center;}
+// .Taskcard_status{
+//     color: #c9184a;
+//     background-color: #ffccd5;
+//     border-radius: 5px;
+//   }
+
+.Taskcard {
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    margin: 2%;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    gap: 10px;
+    background-color: #ffffff;
+}
+
+.Taskcard__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.Taskcard_status {
+    color: #c9184a;
+    background-color: #ffccd5;
+    font-size: small;
+    border-radius: 5px;
+    padding:7.5px;
+}

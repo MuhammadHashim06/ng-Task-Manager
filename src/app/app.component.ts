@@ -16,5 +16,27 @@ export class AppComponent {
   toggleform() {
     this.showform = !this.showform
   }
-  title = 'TaskManager';
+  tasklist=[
+    {
+      title:"Task title",
+      description:"Task description",
+      status:'Incomplete'
+    },
+    {
+      title:"Task title",
+      description:"Task description",
+      status:'Incomplete'
+    },
+    {
+      title:"Task title",
+      description:"Task description",
+      status:'Incomplete'
+    },
+    {
+      title:"Task title",
+      description:"Task description",
+      status:'Incomplete'
+    },
+  ]
+  title = 'Task Manager';
 }
