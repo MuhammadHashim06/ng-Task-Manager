@@ -38,6 +38,15 @@
   width: 100%;
   border-radius: 5px;
 }
+.taskform form #canbutton {
+  cursor: pointer;
+  border: none;
+  color: #c9184a;
+  background-color: #ffccd5;
+  padding: 6.5px;
+  width: 100%;
+  border-radius: 5px;
+}
 .taskform form #button:active {
   background-color: #ff8fa3;
 }

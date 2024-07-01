@@ -1,5 +1,5 @@
 <div class="layout">
-<app-taskform *ngIf="showform" (showform)="toggleform()"></app-taskform>
+<app-taskform *ngIf="showform" (showform)="toggleform()" (taskitem)="addtask($event)"></app-taskform>
 
 <nav>
     <h1>Task Manager</h1>
