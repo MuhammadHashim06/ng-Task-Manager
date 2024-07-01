@@ -1,0 +1,19 @@
+* {
+  font-family: sans-serif;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+nav button {
+    cursor: pointer;
+  color: white;
+  border: none;
+  background-color: #c9184a;
+  padding: 7.5px;
+  border-radius: 5px;
+}
+nav button:active{
+    transform: scale(0.9);
+}

@@ -1,0 +1,44 @@
+.taskform {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+.taskform form {
+  background-color: white;
+  border-radius: 10px;
+  padding: 2.5% 10%;
+  gap: 15px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 10px grey;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.taskform form .taskfield {
+    font-family: sans-serif;
+      border: none;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 5px;
+  outline: none;
+  width: 100%;
+}
+.taskform form #button {
+    cursor: pointer;
+  border: none;
+  color: #c9184a;
+  background-color: #ffccd5;
+  padding: 6.5px;
+  width: 100%;
+  border-radius: 5px;
+}
+.taskform form #button:active{
+    background-color: #ff8fa3;
+
+}
