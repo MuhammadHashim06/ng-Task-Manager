@@ -2,7 +2,17 @@
     <form action="">
         <h2>{{active?.title || 'Active Title'}}</h2>
         <p> {{active?.description||'Add Description'}}</p>
-        <input type="button" id="button" value="Mark as Complete" (click)="setstatus()">
-        <input type="button" id="canbutton" value="Cancel" (click)="setcardstatus()">
+       
+        <div class="bottomlink">
+            <input type="button" id="canbutton" value="Cancel" (click)="setcardstatus()">
+            <input type="button" id="button" value="Edit Task" (click)="setcardstatus()">
+        </div>
+        @if (active.status=='Complete') {
+            <input type="button" class="completebtn" value="Already Completed" >
+        }
+        @else {
+            <input type="button" id="button" value="Mark as Complete" (click)="setstatus()">
+        }
+        
     </form>
 </div>

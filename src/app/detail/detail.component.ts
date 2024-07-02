@@ -11,9 +11,15 @@ export class DetailComponent {
   taskitem:any
 
   @Input()
+  deltask:any
+
+  @Input()
   task:any
 
   @Input()
   index:any
+
+  @Input()
+  activecard:any
   
 }

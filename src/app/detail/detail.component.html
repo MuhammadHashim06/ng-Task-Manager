@@ -1,14 +1,30 @@
 <div class="Taskcard">
-    {{index}}
     <div class="Taskcard__header">
         <div class="Taskcard_title">
             <h3>{{task.title}}</h3>
         </div>
-        <div class="Taskcard_status">
-            <p>{{task.status}}</p>
+        <div class="Taskcard_status {{ task.status === 'Complete' ? 'complete' : 'incomplete' }}" (click)="activecard(task,task.id)">
+            <p>{{ task.status }}</p>
         </div>
     </div>
+    <div class="Taskcard_body">
     <div class="Taskcard_description">
         <p>{{task.description}}</p>
     </div>
+    <input type="button" id="delbutton" value="Delete" (click)="deltask(task.id)">
 </div>
+</div>
+
+
+ <!-- @if(task.status=="Complete"){
+        <div class="Taskcard_status complete">
+            <p>{{task.status}}</p>
+        </div>
+
+        }
+        @else{
+        <div class="Taskcard_status incomplete">
+            <p>{{task.status}}</p>
+        </div>
+
+        } -->

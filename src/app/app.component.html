@@ -1,12 +1,30 @@
 <div class="layout">
-<app-taskform *ngIf="showform" (showform)="toggleform()" (taskitem)="addtask($event)" ></app-taskform>
-<app-taskcard *ngIf="showcard" (cardstatus)="togglecard()" (status)="setstatus($event)" [active]="active" ></app-taskcard>
-<nav>
-    <h1>Task Manager</h1>
-    <div class="link"><button (click)="toggleform()">Add Tasks</button></div>
-</nav>
-<div class="tasklist" *ngFor="let task of tasklist; let i = index">
-    <app-detail (click)="setActive(task,i)" [task]="task" [index]="i" (active)="active"/>
-</div>
-</div>
+    <!-- Task Form Component -->
+    <app-taskform *ngIf="showform" (showform)="toggleform()" (taskitem)="addtask($event)"></app-taskform>
+  
+    <!-- Task Card Component -->
+    <app-taskcard *ngIf="showcard" (cardstatus)="togglecard()" (status)="setstatus($event)" [active]="active"></app-taskcard>
+  
+    <!-- Navigation Bar -->
+    <nav>
+      <h1>Task Manager</h1>
+      <div class="link">
+        <button (click)="toggleform()">Add Tasks</button>
+      </div>
+    </nav>
+  
+    <!-- Task List with Detail Component -->
+    <div class="tasklist">
+      <div *ngFor="let task of tasklist; let i = index">
+        <app-detail 
+          [activecard]="setActive" 
+          [task]="task" 
+          [index]="i" 
+          (active)="active = $event" 
+          [deltask]="deltask">
+        </app-detail>
+      </div>
+    </div>
+  </div>
+  
 <router-outlet />

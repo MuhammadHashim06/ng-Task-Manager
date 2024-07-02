@@ -1,61 +1,68 @@
 .taskform {
-    transform: scale(0);
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    animation: showup 0.5s ease forwards;
+  transform: scale(0);
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  animation: showup 0.5s ease forwards;
 }
 
 @keyframes showup {
-    0% {
-        transform: scale(0);
-    }
-    80% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
-
-  .taskform form {
-    background-color: white;
-    border-radius: 10px;
-    padding: 2.5% 10%;
-    gap: 15px;
-    box-sizing: border-box;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.completebtn {
+  cursor: pointer;
+  border: none;
+  padding: 6.5px;
+  width: 100%;
+  border-radius: 5px;
+}
+.taskform form {
+  background-color: white;
+  border-radius: 10px;
+  padding: 2.5% 10%;
+  gap: 15px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.bottomlink{
     display: flex;
-  }
-  .taskform form #button {
-    cursor: pointer;
-    border: none;
-    background-color: #c9184a;
-    color: white;
-    padding: 6.5px;
-    width: 100%;
-    border-radius: 5px;
-  }
-  .taskform form #canbutton {
-    cursor: pointer;
-    border: none;
-    color: #c9184a;
-    background-color: #ffccd5;
-    padding: 6.5px;
-    width: 100%;
-    border-radius: 5px;
-  }
-  .taskform form #button:active {
-    background-color: #ff8fa3;
-  }
-  
+    gap: 10px;
+}
+.taskform form #button {
+  cursor: pointer;
+  border: none;
+  background-color: #c9184a;
+  color: white;
+  padding: 6.5px;
+  width: 100%;
+  border-radius: 5px;
+}
+.taskform form #canbutton {
+  cursor: pointer;
+  border: none;
+  color: #c9184a;
+  background-color: #ffccd5;
+  padding: 6.5px;
+  width: 100%;
+  border-radius: 5px;
+}
+.taskform form #button:active {
+  background-color: #ff8fa3;
+}

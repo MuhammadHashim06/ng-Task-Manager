@@ -23,7 +23,7 @@ export class TaskcardComponent {
   }
 
   setstatus(){
-    this.status.emit("Complete")
+    this.status.emit(this.active.status)
     this.cardstatus.emit(false)
   }
 }
