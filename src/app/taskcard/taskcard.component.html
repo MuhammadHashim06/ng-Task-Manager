@@ -1,0 +1,8 @@
+<div class="taskform">
+    <form action="">
+        <h2>{{active?.title || 'Active Title'}}</h2>
+        <p> {{active?.description||'Add Description'}}</p>
+        <input type="button" id="button" value="Mark as Complete" (click)="setstatus()">
+        <input type="button" id="canbutton" value="Cancel" (click)="setcardstatus()">
+    </form>
+</div>

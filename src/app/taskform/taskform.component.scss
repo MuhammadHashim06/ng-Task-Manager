@@ -1,13 +1,30 @@
 .taskform {
+  transform: scale(0);
   position: absolute;
+  top: 0;
+  left: 0;
   height: 100%;
   width: 100%;
+  display: flex;
   justify-content: center;
   align-items: center;
-  display: flex;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
+  animation: showup 0.5s ease forwards; /* Applying animation */
 }
+
+@keyframes showup {
+  0% {
+      transform: scale(0);
+  }
+  80% {
+      transform: scale(1.1);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
 .taskform form {
   background-color: white;
   border-radius: 10px;

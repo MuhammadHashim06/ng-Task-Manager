@@ -1,12 +1,12 @@
 <div class="layout">
-<app-taskform *ngIf="showform" (showform)="toggleform()" (taskitem)="addtask($event)"></app-taskform>
-
+<app-taskform *ngIf="showform" (showform)="toggleform()" (taskitem)="addtask($event)" ></app-taskform>
+<app-taskcard *ngIf="showcard" (cardstatus)="togglecard()" (status)="setstatus($event)" [active]="active" ></app-taskcard>
 <nav>
     <h1>Task Manager</h1>
     <div class="link"><button (click)="toggleform()">Add Tasks</button></div>
 </nav>
-<div class="tasklist" *ngFor="let task of tasklist">
-    <app-detail [task]="task" />
+<div class="tasklist" *ngFor="let task of tasklist; let i = index">
+    <app-detail (click)="setActive(task,i)" [task]="task" [index]="i" (active)="active"/>
 </div>
 </div>
 <router-outlet />

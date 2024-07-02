@@ -1,4 +1,4 @@
-import { Component, Input} from '@angular/core';
+import { Component, EventEmitter, Input, Output} from '@angular/core';
 
 @Component({
   selector: 'app-detail',
@@ -8,10 +8,12 @@ import { Component, Input} from '@angular/core';
   styleUrl: './detail.component.scss'
 })
 export class DetailComponent {
-
   taskitem:any
 
   @Input()
   task:any
+
+  @Input()
+  index:any
   
 }
