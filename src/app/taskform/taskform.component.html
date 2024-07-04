@@ -1,9 +1,29 @@
 <div class="taskform">
-    <form action="">
-        <p style="font-weight: bold;font-size: medium; width: 100%; margin: 0;">Add Task Details</p>
-        <input type="text" class="taskfield" id="title" name="title" [(ngModel)]="title" placeholder="Enter your title">
-        <textarea type="text" class="taskfield" id="description" name="description" [(ngModel)]="description" placeholder="Enter your description"></textarea>
-        <input type="button" id="button" value="Add Task" (click)="setTask()">
-        <input type="button" id="canbutton" value="Cancel" (click)="toggle()">
-    </form>
+  <form action="">
+    <p style="font-weight: bold; font-size: medium; width: 100%; margin: 0">
+      Add Task Details
+    </p>
+    <input
+      type="text"
+      class="taskfield"
+      id="title"
+      name="title"
+      [(ngModel)]="title"
+      placeholder="Enter your title"
+    />
+    <textarea
+      type="text"
+      class="taskfield"
+      id="description"
+      name="description"
+      [(ngModel)]="description"
+      placeholder="Enter your description"
+    ></textarea>
+    @if (detail) {
+    <input type="button" id="button" value="Save Changes" (click)="saveTask()" />
+    }@else{
+    <input type="button" id="button" value="Add Task" (click)="setTask()" />
+    }
+    <input type="button" id="canbutton" value="Cancel" (click)="toggle()" />
+  </form>
 </div>

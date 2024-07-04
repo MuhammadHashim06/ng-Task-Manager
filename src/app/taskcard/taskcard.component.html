@@ -1,11 +1,11 @@
 <div class="taskform">
     <form action="">
-        <h2>{{active?.title || 'Active Title'}}</h2>
+        <h2 >{{active?.title || 'Active Title'}}</h2>
         <p> {{active?.description||'Add Description'}}</p>
        
         <div class="bottomlink">
             <input type="button" id="canbutton" value="Cancel" (click)="setcardstatus()">
-            <input type="button" id="button" value="Edit Task" (click)="setcardstatus()">
+            <input type="button" id="button" value="Edit Task" (click)="setValuestoedit()">
         </div>
         @if (active.status=='Complete') {
             <input type="button" class="completebtn" value="Already Completed" >

@@ -12,6 +12,8 @@ export class TaskcardComponent {
   @Input()
   active?:any
 
+  @Input()setValuestoedit:any
+
   @Output()
   status = new EventEmitter<String>
 
@@ -23,7 +25,7 @@ export class TaskcardComponent {
   }
 
   setstatus(){
-    this.status.emit(this.active.status)
+    this.status.emit(this.active)
     this.cardstatus.emit(false)
   }
 }

@@ -1,15 +1,15 @@
 <div class="layout">
     <!-- Task Form Component -->
-    <app-taskform *ngIf="showform" (showform)="toggleform()" (taskitem)="addtask($event)"></app-taskform>
+    <app-taskform *ngIf="showform" (showform)="toggleform()" (taskitem)="addtask($event)" [detail]="active"  ></app-taskform>
   
     <!-- Task Card Component -->
-    <app-taskcard *ngIf="showcard" (cardstatus)="togglecard()" (status)="setstatus($event)" [active]="active"></app-taskcard>
+    <app-taskcard *ngIf="showcard" (cardstatus)="togglecard()" (status)="setstatus($event)" [setValuestoedit]="setValuestoedit" [active]="active"  ></app-taskcard>
   
     <!-- Navigation Bar -->
     <nav>
       <h1>Task Manager</h1>
       <div class="link">
-        <button (click)="toggleform()">Add Tasks</button>
+        <button (click)="toggleedtform()">Add Tasks</button>
       </div>
     </nav>
   
